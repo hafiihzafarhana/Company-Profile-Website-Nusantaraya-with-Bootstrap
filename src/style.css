@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar-brand{
+  color: white;
+}
+
+.navbar-brand:hover{
+  color: white;
+}
+
+.button-nav{
+  color: gray;
+}
+
+.get-started{
+  border: 3px solid gray;
+  border-radius: 5px;
+  padding: 0.3px;
+}
+
+.get-started-1{
+  color: gray;
+}
+
+/* Banner */
+.banner-image{
+  background-image: url("../img/baner2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .8;
+}
+
+
+/* Scroll top */
+.to-top{
+  background-color: white;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  opacity: 0;
+  transition: all .4s;
+  z-index: 10000;
+}
+
+/* About us */
+.about{
+  min-height: 91vh;
+}
+
+.aboutus{
+  background-color: rgb(250, 250, 250);
+}
+
+/* Produk */
+.products{
+  min-height: 91vh;
+}
+
+.link-produk{
+  color: black;
+  text-decoration: none;
+}
+
+.link-produk:hover{
+  color: black;
+}
+
+/* Services */
+.service{
+  min-height: 91vh;
+  background-color: rgb(250, 250, 250);
+}
+
+
+/* Contact us */
+section.contact-me{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 91vh;
+}
+
+section.contact-me::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.containers{
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+}
+
+.containers .contactInfo{
+  position: absolute;
+  background-color: rgb(167, 167, 167);
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.containers .contactInfo h2{
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.containers .contactInfo ul.info{
+  position: relative;
+  margin: 20px 0;
+}
+
+.containers .contactInfo ul.info li{
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.containers .contactInfo ul.info li span:nth-child(1){
+ width: 30px;
+ min-width: 30px
+}
+
+.containers .contactInfo ul.info li span:nth-child(1) li{
+  max-width: 100%;
+  filter: invert(1);
+}
+
+.containers .contactInfo ul.info li span:nth-child(2){
+  color: white;
+  margin-left: 20px;
+  font-weight: 300;
+}
+
+.containers .contactInfo ul.sci{
+  position: relative;
+  display: flex;
+}
+
+.containers .contactInfo ul.sci li{
+  list-style: none;
+  margin-right: 15px;
+}
+
+.containers .contactInfo ul.sci li a{
+  text-decoration: none;
+}
+
+.containers .contactInfo ul.sci li a .lab{
+  color: black;
+}
+
+.containers .contactForm{
+  position: absolute;
+  padding: 70px 100px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  background-color: white;
+  height: 100%;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+
+.containers .contactForm h2{
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.containers .contactForm .formBox{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.containers .contactForm .formBox .inputBox{
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.containers .contactForm .formBox .inputBox.w50{
+  width: 47%;
+}
+
+.containers .contactForm .formBox .inputBox.w100{
+  width: 100%;
+}
+
+.containers .contactForm .formBox .inputBox input,
+.containers .contactForm .formBox .inputBox textarea{
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  color: black;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+
+.containers .contactForm .formBox .inputBox textarea{
+  height: 120px;
+}
+
+.containers .contactForm .formBox .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  transition: .3s;
+  font-weight: 300;
+}
+
+.containers .contactForm .formBox .inputBox input:focus ~ span,
+.containers .contactForm .formBox .inputBox input:valid ~ span,
+.containers .contactForm .formBox .inputBox textarea:focus ~ span,
+.containers .contactForm .formBox .inputBox textarea:valid ~ span{
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.containers .contactForm .formBox .inputBox input[type="submit"]{
+  position: relative;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+}
+
+.containers .contactForm .formBox .inputBox input[type="submit"]:hover{
+  background-color: rgb(229, 226, 226);
+  color: black;
+}
+
+@media (max-width: 1200px) {
+  .containers {
+    width: 90%;
+    min-width: auto;
+    margin:20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .containers .contactInfo{
+    top: 0;
+    height: 550px;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .containers .contactForm{
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: 0;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 991px){
+  section.containers{
+    background-color: white;
+  }
+
+  .containers.containers::before{
+    display: none;
+  }
+
+  .containers{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .containers .contactForm{
+    width: 100%;
+    height: auto;
+  }
+  .containers .contactInfo{
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    flex-direction: row;
+  }
+
+  .containers .contactInfo ul.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px){
+  .containers .contactForm{
+    padding: 25px;
+  }
+
+  .containers .contactInfo{
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .containers .contactInfo ul.sci{
+    margin-top: 40px;
+  }
+
+  .containers .contactForm .formBox .inputBox.w50{
+    width: 100%;
+  }
+}
+
+
+/* untuk ukuran maksimal 360px */
+@media (max-width: 360px) { 
+  .get-started{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.3px;
+    color: gray;
+  }
+
+  .get-started-banner{
+    display: none;
+  }
+
+  .button-nav{
+    font-family: 900;
+  }
+
+  .button-nav:hover{
+    color: gray;
+  }
+
+  .button-nav:focus{
+    color: gray;
+  }
+
+  .get-started-1:hover{
+    color: gray;
+  }
+
+  .get-started-1:focus{
+    color: gray;
+  }
+
+  .text-banner-h1{
+    color: white;
+  }
+
+  .text-banner-p{
+    font-size: 10px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .img-1{
+    display: none;
+  }
+
+ }
+
+ /* untuk ukuran komputer dan desktop */
+ @media (min-width: 992px) { 
+  .get-started:hover{
+    background-color: gray;
+  }
+  
+  .button-nav:hover{
+    color: black;
+  }
+
+  .button-nav:focus{
+    color: gray;
+    border-bottom: 2px solid black;
+  }
+
+  .get-started-banner{
+    display: none;
+  }
+
+  .get-started-1:hover{
+    color: white;
+  }
+
+  .get-started-1:focus{
+    color: black;
+  }
+
+  .card{
+    transition: 1s;
+  }
+
+  .card:hover{
+    transform: scale(1.02);
+    transition: 1s;
+  }
+
+  .produk-konten{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex !important;
+  }
+
+  .services-konten{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex !important;
+  }
+
+  
+ }
+
+ /* untuk ukuran tablet */
+ @media (max-width: 991.98px) and (min-width: 768px){ 
+  .get-started{
+    display: none;
+  } 
+  .get-started-banner{
+    border: 3px solid gray;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .get-started-banner:hover{
+    color: white;
+  }
+
+  .get-started-banner:focus{
+    color: white;
+  }
+
+  .button-nav:hover{
+    color: gray;
+  }
+
+  .button-nav:focus{
+    color: gray;
+  }
+
+  .services-konten{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex !important;
+  }
+
+  .produk-konten{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex !important;
+  }
+
+ }
+
+ /* untuk ukuran tablet lainya */
+ @media (max-width: 767.98px) and (min-width: 360px){ 
+  .get-started-banner{
+    display: none;
+  }
+
+  .button-nav{
+    font-family: 900;
+  }
+
+  .button-nav:hover{
+    color: gray;
+  }
+
+  .button-nav:focus{
+    color: gray;
+  }
+
+  .get-started-1:hover{
+    color: gray;
+  }
+
+  .get-started-1:focus{
+    color: gray;
+  }
+
+  .get-started{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0.3px;
+    color: gray;
+  }
+
+  .produk-konten{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex !important;
+  }
+
+  .services-konten{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex !important;
+  }
+
+  h1.welcome-text{
+    margin-bottom: 300px !important;
+    font-weight: 900;
+  }
+
+ }
